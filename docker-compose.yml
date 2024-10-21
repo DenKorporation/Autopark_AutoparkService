@@ -1,0 +1,26 @@
+﻿name: autopark-service
+
+services:
+  autopark.service:
+    image: ${Docker_registry}/autopark.service.api
+    restart: unless-stopped
+    ports:
+      - "5200:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT}
+      - ASPNETCORE_HTTP_PORTS=80
+    depends_on:
+      autopark.db:
+        condition: service_started
+
+  autopark.db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=autopark
+      - POSTGRES_USER=${Autopark_db_user}
+      - POSTGRES_PASSWORD=${Autopark_db_password}
+    volumes:
+      - .containers/autopark-db:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
