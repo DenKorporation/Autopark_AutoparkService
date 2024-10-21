@@ -16,7 +16,6 @@ public static class PermissionDataFaker
         .RuleFor(p => p.Vehicle, _ => VehicleDataFaker.VehicleFaker.Generate())
         .RuleFor(p => p.VehicleId, (_, p) => p.Vehicle.Id);
 
-
     public static Faker<PermissionResponse> PermissionResponseFaker => new Faker<PermissionResponse>()
         .CustomInstantiator(
             f => new PermissionResponse(

@@ -4,4 +4,5 @@ using AutoparkService.Application.Messaging;
 
 namespace AutoparkService.Application.UseCases.Queries.Insurances.GetAll;
 
-public record GetAllInsurancesQuery(FilterInsurancesRequest Request) : IQuery<PagedList<InsuranceResponse>>;
+public record GetAllInsurancesQuery(FilterInsurancesRequest Request)
+    : IQuery<PagedList<InsuranceResponse>>;

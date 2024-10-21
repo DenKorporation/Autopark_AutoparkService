@@ -4,4 +4,5 @@ using AutoparkService.Application.Messaging;
 
 namespace AutoparkService.Application.UseCases.Commands.Insurances.Update;
 
-public record UpdateInsuranceCommand(Guid Id, InsuranceRequest Request) : ICommand<InsuranceResponse>;
+public record UpdateInsuranceCommand(Guid Id, InsuranceRequest Request)
+    : ICommand<InsuranceResponse>;

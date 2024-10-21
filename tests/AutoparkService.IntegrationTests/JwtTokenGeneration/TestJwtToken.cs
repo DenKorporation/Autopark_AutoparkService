@@ -5,7 +5,7 @@ namespace AutoparkService.IntegrationTests.JwtTokenGeneration;
 
 public class TestJwtToken
 {
-    public List<Claim> Claims { get; } = new();
+    public List<Claim> Claims { get; } = new List<Claim>();
     public int ExpiresInMinutes { get; set; } = 30;
 
     public TestJwtToken WithRole(string roleName)

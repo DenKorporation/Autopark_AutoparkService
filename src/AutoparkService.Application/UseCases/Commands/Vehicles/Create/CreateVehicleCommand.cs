@@ -4,4 +4,5 @@ using AutoparkService.Application.Messaging;
 
 namespace AutoparkService.Application.UseCases.Commands.Vehicles.Create;
 
-public record CreateVehicleCommand(VehicleRequest Request) : ICommand<VehicleResponse>;
+public record CreateVehicleCommand(VehicleRequest Request)
+    : ICommand<VehicleResponse>;

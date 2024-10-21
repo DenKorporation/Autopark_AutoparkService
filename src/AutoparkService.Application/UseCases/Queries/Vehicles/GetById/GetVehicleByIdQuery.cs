@@ -3,4 +3,5 @@ using AutoparkService.Application.Messaging;
 
 namespace AutoparkService.Application.UseCases.Queries.Vehicles.GetById;
 
-public record GetVehicleByIdQuery(Guid Id) : IQuery<VehicleResponse>;
+public record GetVehicleByIdQuery(Guid Id)
+    : IQuery<VehicleResponse>;

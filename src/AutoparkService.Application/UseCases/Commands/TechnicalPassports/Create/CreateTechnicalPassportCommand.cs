@@ -4,4 +4,5 @@ using AutoparkService.Application.Messaging;
 
 namespace AutoparkService.Application.UseCases.Commands.TechnicalPassports.Create;
 
-public record CreateTechnicalPassportCommand(TechnicalPassportRequest Request) : ICommand<TechnicalPassportResponse>;
+public record CreateTechnicalPassportCommand(TechnicalPassportRequest Request)
+    : ICommand<TechnicalPassportResponse>;

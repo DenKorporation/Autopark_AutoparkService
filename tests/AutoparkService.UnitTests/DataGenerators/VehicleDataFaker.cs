@@ -7,7 +7,10 @@ namespace AutoparkService.UnitTests.DataGenerators;
 
 public static class VehicleDataFaker
 {
-    private static readonly string[] Statuses = ["Active", "Inactive", "Under Repair", "Decommissioned"];
+    private static readonly string[] Statuses =
+    [
+        "Active", "Inactive", "Under Repair", "Decommissioned",
+    ];
 
     public static Faker<Vehicle> VehicleFaker => new Faker<Vehicle>()
         .RuleFor(v => v.Id, _ => Guid.NewGuid())

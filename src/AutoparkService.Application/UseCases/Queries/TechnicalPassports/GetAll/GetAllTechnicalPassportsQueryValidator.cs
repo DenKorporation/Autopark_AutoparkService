@@ -79,7 +79,6 @@ public class GetAllTechnicalPassportsQueryValidator : AbstractValidator<GetAllTe
             .WithMessage("Length of technical passport VIN code mustn't exceed 17")
             .When(x => x.Request.VIN is not null);
 
-
         RuleFor(x => x.Request.MaxWeightFrom)
             .GreaterThanOrEqualTo(0U)
             .WithMessage("Vehicle max weight shouldn't be negative")

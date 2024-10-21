@@ -73,8 +73,7 @@ public static class TechnicalPassportDataFaker
                 f.Address.FullAddress(),
                 f.Date.PastDateOnly(10).ToString(),
                 f.Random.String2(3, "0123456789") + "-" + f.Random.String2(2, "0123456789"),
-                f.Random.String2(4, "0123456789") + f.Random.String2(2, "ABCDEFGHIJKLMNOPQRSTUVWXYZ") + "-" +
-                f.Random.String2(1, "0123456789"),
+                f.Random.String2(4, "0123456789") + f.Random.String2(2, "ABCDEFGHIJKLMNOPQRSTUVWXYZ") + "-" + f.Random.String2(1, "0123456789"),
                 f.Vehicle.Manufacturer(),
                 f.Vehicle.Model(),
                 (uint)f.Date.Past(30).Year,

@@ -4,4 +4,5 @@ using AutoparkService.Application.Messaging;
 
 namespace AutoparkService.Application.UseCases.Commands.Vehicles.Update;
 
-public record UpdateVehicleCommand(Guid Id, VehicleRequest Request) : ICommand<VehicleResponse>;
+public record UpdateVehicleCommand(Guid Id, VehicleRequest Request)
+    : ICommand<VehicleResponse>;

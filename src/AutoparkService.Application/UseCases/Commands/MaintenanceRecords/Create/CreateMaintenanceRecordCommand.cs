@@ -4,4 +4,5 @@ using AutoparkService.Application.Messaging;
 
 namespace AutoparkService.Application.UseCases.Commands.MaintenanceRecords.Create;
 
-public record CreateMaintenanceRecordCommand(MaintenanceRecordRequest Request) : ICommand<MaintenanceRecordResponse>;
+public record CreateMaintenanceRecordCommand(MaintenanceRecordRequest Request)
+    : ICommand<MaintenanceRecordResponse>;

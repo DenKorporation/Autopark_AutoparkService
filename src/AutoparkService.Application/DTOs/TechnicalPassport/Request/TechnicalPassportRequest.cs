@@ -14,7 +14,7 @@ public record TechnicalPassportRequest(
     string Brand,
     string Model,
     uint CreationYear,
-    string Color, 
+    string Color,
     string VIN,
     string VehicleType,
     uint MaxWeight,
